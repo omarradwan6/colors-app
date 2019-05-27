@@ -6,3 +6,55 @@
 
     height: 90%;
 }
+
+.slider{
+    width:340px;
+    margin:0 20px;
+    display: inline-block;
+
+}
+
+.rc-slider-track{
+    background-color: transparent;
+}
+
+.rc-slider-rail{
+    height: 10px;
+}
+
+.rc-slider-handle,
+.rc-slider-handle:hover,
+.rc-slider-handle:focus,
+.rc-slider-handle:active
+{
+    outline: none;
+    background-color: green;
+    border:2px solid green;
+    margin-top:-2px;
+    width:13px;
+    height:13px;
+    box-shadow: none;
+}
+
+.navbar{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 6vh;
+
+}
+
+.logo{
+
+    margin-right: 15px;
+    padding:0 13px;
+    font-size: 22px;
+    background-color: #eceff1;
+    color:black;
+    height:100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+
+}
