@@ -11,8 +11,8 @@ const styles = {
         padding: '0.5rem',
         position: 'relative',
         overflow: 'hidden',
-        "& hover": {
-            cursor: 'pointer'
+        '& hover': {
+            cursor: 'pointer',
         }
 
     },
@@ -62,7 +62,7 @@ class MiniPalette extends React.Component {
         })
         return (
 
-            <div className={classes.root}>
+            <div className={classes.root} onClick={this.props.handleClick}>
                 <div className={classes.colors}>
 
                     {miniColorBoxes}

@@ -9,13 +9,13 @@ class Palette extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = { level: 500,format:'hex' }
+    this.state = { level: 500, format: 'hex' }
     this.changeLevel = this.changeLevel.bind(this)
-    this.changeFormat=this.changeFormat.bind(this)
+    this.changeFormat = this.changeFormat.bind(this)
   }
 
-  changeFormat(e){
-    this.setState({format:e})
+  changeFormat(e) {
+    this.setState({ format: e })
 
   }
 
@@ -25,24 +25,24 @@ class Palette extends React.Component {
   }
 
   render() {
-const {paletteName,emoji}=this.props.colors
-console.log(this.props.colors)
+    const { paletteName, emoji, id } = this.props.colors
+
     const colorboxes = this.props.colors.colors[this.state.level].map(color => {
 
-      return <ColorBox background={color[this.state.format]} name={color.name} key={color.id} />
+      return <ColorBox background={color[this.state.format]} name={color.name} key={color.id} id={color.id} paletteId={id} palette={this.props.colors} />
     });
 
 
     return (
       <div className='Palette'>
-        <Navbar level={this.state.level} changeLevel={this.changeLevel} changeFormat={this.changeFormat}/>
-        
+        <Navbar level={this.state.level} changeLevel={this.changeLevel} changeFormat={this.changeFormat} />
+
         <div className='Palette-colors'>
           {colorboxes}
         </div>
         <footer className='palette-footer'>
-      <span>{paletteName}</span>
-      <span>{emoji}</span>
+          <span>{paletteName}</span>
+          <span>{emoji}</span>
 
         </footer>
       </div>
